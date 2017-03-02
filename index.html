@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>JS-CBTS</title>
+		<script src="./dist/js-cbts.js"></script>
+		<script>
+			(function () {
+				var cbts = new window['JS-CBTS'](window, 'url');
+			})();
+		</script>
+	</head>
+	<body>
+		<img src="someurl" />
+
+		<script>
+			setTimeout(function () {
+				var scr = document.create('script');
+
+				scr.src = "asdfasdf";
+
+				document.body.append(scr);
+			}, 1000);
+		</script>
+	</body>
+</html>
