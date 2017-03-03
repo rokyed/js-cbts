@@ -5,7 +5,7 @@
 		<script src="./dist/js-cbts.js"></script>
 		<script>
 			(function () {
-				var cbts = new window['JS-CBTS'](window, 'url');
+				var cbts = new window['JS-CBTS'](window, './bugreport');
 			})();
 		</script>
 	</head>
@@ -14,8 +14,10 @@
 
 		<script>
 			setTimeout(function () {
-				var scr = document.create('script');
-
+				var scr = document.createElement('script');
+				scr.onerror = function () {
+					throw new Error('Script failed to load:' + scr.src);
+				};
 				scr.src = "asdfasdf";
 
 				document.body.append(scr);

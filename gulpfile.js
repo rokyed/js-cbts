@@ -41,8 +41,8 @@ gulp.task('build', function() {
 
 gulp.task('watch', function() {
 	// example
-	var proxyOptions = url.parse('http://localhost:4000/server/app');
-	proxyOptions.route = '/server/app';
+	var proxyOptions = url.parse('http://localhost:4200/bugreport');
+	proxyOptions.route = '/bugreport';
 
 	browserSync.init({
 		server: {

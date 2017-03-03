@@ -24,7 +24,7 @@ class ClientBugTrackingSystem {
 		let request = new XMLHttpRequest();
 		let date = new Date().toString();
 
-		request.open('GET', this._dest + encodeURIComponent(JSON.stringify({
+		request.open('GET', this._dest + "?data=" + encodeURIComponent(JSON.stringify({
 			data: data,
 			when: date,
 			from: this._ho.location.href
