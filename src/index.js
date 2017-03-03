@@ -20,11 +20,9 @@ class ClientBugTrackingSystem {
 		};
 	}
 
-
 	sendData (data) {
 		let request = new XMLHttpRequest();
 		let date = new Date().toString();
-
 
 		request.open('GET', this._dest + encodeURIComponent(JSON.stringify({
 			data: data,
